@@ -82,6 +82,7 @@
     <%-- Дополнительные блоки для подключения скриптов на страницах через PlaceholderPageContentConnector. --%>
     <asp:ContentPlaceHolder ID="FlexberryScripts" runat="server" />
     <asp:ContentPlaceHolder ID="ContentPlaceHolder0" runat="server"/>
+ 
     <asp:ContentPlaceHolder ID="FlexberryRawHtml" runat="server"/>
 </body>
 </html>

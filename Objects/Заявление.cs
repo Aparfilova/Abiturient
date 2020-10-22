@@ -33,25 +33,29 @@ namespace IIS.Abiturient
     [View("ЗаявлениеE", new string[] {
             "ПорядковыйНомер as \'Порядковый номер\'",
             "ДатаПодачи as \'Дата подачи\'",
-            "ТипЗаявления as \'Тип заявления\'",
+            "Абитуриент",
             "Абитуриент.Фамилия as \'Фамилия\'",
             "Абитуриент.Имя as \'Имя\'",
             "Абитуриент.Отчество as \'Отчество\'",
             "Абитуриент.Возраст as \'Возраст\'",
             "Абитуриент.Город as \'Город\'",
-            "Абитуриент.Адрес as \'Адрес\'"})]
+            "Абитуриент.Адрес as \'Адрес\'",
+            "ПриемнаяКомиссия",
+            "ПриемнаяКомиссия.Должность as \'Приемная комиссия\'"})]
     [AssociatedDetailViewAttribute("ЗаявлениеE", "ЗаписьВЗаявлении", "ЗаписьВЗаявленииE", true, "", "", true, new string[] {
             ""})]
     [View("ЗаявлениеL", new string[] {
             "ПорядковыйНомер as \'Порядковый номер\'",
             "ДатаПодачи as \'Дата подачи\'",
-            "ТипЗаявления as \'Тип заявления\'",
+            "Абитуриент",
             "Абитуриент.Фамилия as \'Фамилия\'",
             "Абитуриент.Имя as \'Имя\'",
             "Абитуриент.Отчество as \'Отчество\'",
             "Абитуриент.Возраст as \'Возраст\'",
             "Абитуриент.Город as \'Город\'",
-            "Абитуриент.Адрес as \'Адрес\'"})]
+            "Абитуриент.Адрес as \'Адрес\'",
+            "ПриемнаяКомиссия",
+            "ПриемнаяКомиссия.Должность as \'Приемная комиссия\'"})]
     [AssociatedDetailViewAttribute("ЗаявлениеL", "ЗаписьВЗаявлении", "ЗаписьВЗаявленииE", true, "", "", true, new string[] {
             ""})]
     public class Заявление : ICSSoft.STORMNET.DataObject
@@ -60,8 +64,6 @@ namespace IIS.Abiturient
         private string fПорядковыйНомер;
         
         private System.DateTime fДатаПодачи;
-        
-        private string fТипЗаявления;
         
         private IIS.Abiturient.ПриемнаяКомиссия fПриемнаяКомиссия;
         
@@ -134,38 +136,6 @@ namespace IIS.Abiturient
                 // *** Start programmer edit section *** (Заявление.ДатаПодачи Set end)
 
                 // *** End programmer edit section *** (Заявление.ДатаПодачи Set end)
-            }
-        }
-        
-        /// <summary>
-        /// ТипЗаявления.
-        /// </summary>
-        // *** Start programmer edit section *** (Заявление.ТипЗаявления CustomAttributes)
-
-        // *** End programmer edit section *** (Заявление.ТипЗаявления CustomAttributes)
-        [StrLen(255)]
-        public virtual string ТипЗаявления
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Заявление.ТипЗаявления Get start)
-
-                // *** End programmer edit section *** (Заявление.ТипЗаявления Get start)
-                string result = this.fТипЗаявления;
-                // *** Start programmer edit section *** (Заявление.ТипЗаявления Get end)
-
-                // *** End programmer edit section *** (Заявление.ТипЗаявления Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Заявление.ТипЗаявления Set start)
-
-                // *** End programmer edit section *** (Заявление.ТипЗаявления Set start)
-                this.fТипЗаявления = value;
-                // *** Start programmer edit section *** (Заявление.ТипЗаявления Set end)
-
-                // *** End programmer edit section *** (Заявление.ТипЗаявления Set end)
             }
         }
         

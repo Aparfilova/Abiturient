@@ -33,9 +33,37 @@
 
 </div>
 <div class="clearfix">
-  <asp:Label CssClass="descLbl" ID="ctrlФакультет_НазваниеФакультетаLabel" runat="server" Text="Факультет.НазваниеФакультета" EnableViewState="False">
+  <asp:Label CssClass="descLbl" ID="ctrlФакультетLabel" runat="server" Text="Факультет" EnableViewState="False">
+</asp:Label>
+<ac:MasterEditorAjaxLookUp ID="ctrlФакультет" CssClass="descTxt" runat="server" ShowInThickBox="True" Autocomplete="true" />
+
+<asp:RequiredFieldValidator ID="ctrlФакультетRequiredFieldValidator" runat="server" ControlToValidate="ctrlФакультет"
+                            ErrorMessage="Не указано: Факультет" Text="*" 
+                            EnableClientScript="true" ValidationGroup="savedoc" />
+
+</div>
+<div class="clearfix">
+  <asp:Label CssClass="descLbl" ID="ctrlФакультет_НазваниеФакультетаLabel" runat="server" Text="Факультет" EnableViewState="False">
 </asp:Label>
 <asp:TextBox CssClass="descTxt" ID="ctrlФакультет_НазваниеФакультета" runat="server" ReadOnly="true">
+</asp:TextBox>
+
+
+</div>
+<div class="clearfix">
+  <asp:Label CssClass="descLbl" ID="ctrlТипЗаявленияLabel" runat="server" Text="ТипЗаявления" EnableViewState="False">
+</asp:Label>
+<ac:MasterEditorAjaxLookUp ID="ctrlТипЗаявления" CssClass="descTxt" runat="server" ShowInThickBox="True" Autocomplete="true" />
+
+<asp:RequiredFieldValidator ID="ctrlТипЗаявленияRequiredFieldValidator" runat="server" ControlToValidate="ctrlТипЗаявления"
+                            ErrorMessage="Не указано: ТипЗаявления" Text="*" 
+                            EnableClientScript="true" ValidationGroup="savedoc" />
+
+</div>
+<div class="clearfix">
+  <asp:Label CssClass="descLbl" ID="ctrlТипЗаявления_НаименованиеLabel" runat="server" Text="ТипЗаявления.Наименование" EnableViewState="False">
+</asp:Label>
+<asp:TextBox CssClass="descTxt" ID="ctrlТипЗаявления_Наименование" runat="server" ReadOnly="true">
 </asp:TextBox>
 
 

@@ -32,13 +32,10 @@ namespace IIS.Abiturient
     [Caption("Запись в заявлении")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ЗаписьВЗаявленииE", new string[] {
-            "ФормаОбучения.Наименование as \'Форма обучения\'",
             "СрокОбучения as \'Срок обучения\'",
             "Приоритет as \'Приоритет\'",
-            "Специальность as \'Специальность\'",
-            "Специальность.Наименование as \'Наименование\'"}, Hidden=new string[] {
-            "Специальность.Наименование"})]
-    [MasterViewDefineAttribute("ЗаписьВЗаявленииE", "Специальность", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
+            "Специальность",
+            "Специальность.Наименование as \'Наименование\'"})]
     public class ЗаписьВЗаявлении : ICSSoft.STORMNET.DataObject
     {
         
@@ -47,8 +44,6 @@ namespace IIS.Abiturient
         private int fПриоритет;
         
         private IIS.Abiturient.Специальность fСпециальность;
-        
-        private IIS.Abiturient.ФормаОбучения fФормаОбучения;
         
         private IIS.Abiturient.Заявление fЗаявление;
         
@@ -150,40 +145,6 @@ namespace IIS.Abiturient
                 // *** Start programmer edit section *** (ЗаписьВЗаявлении.Специальность Set end)
 
                 // *** End programmer edit section *** (ЗаписьВЗаявлении.Специальность Set end)
-            }
-        }
-        
-        /// <summary>
-        /// Запись в заявлении.
-        /// </summary>
-        // *** Start programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения CustomAttributes)
-
-        // *** End programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения CustomAttributes)
-        [PropertyStorage(new string[] {
-                "ФормаОбучения"})]
-        [NotNull()]
-        public virtual IIS.Abiturient.ФормаОбучения ФормаОбучения
-        {
-            get
-            {
-                // *** Start programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Get start)
-
-                // *** End programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Get start)
-                IIS.Abiturient.ФормаОбучения result = this.fФормаОбучения;
-                // *** Start programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Get end)
-
-                // *** End programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Set start)
-
-                // *** End programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Set start)
-                this.fФормаОбучения = value;
-                // *** Start programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Set end)
-
-                // *** End programmer edit section *** (ЗаписьВЗаявлении.ФормаОбучения Set end)
             }
         }
         

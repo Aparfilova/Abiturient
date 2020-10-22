@@ -54,6 +54,7 @@
     <Reference Include="System">
       <HintPath>System</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data">
       <HintPath>System.Data</HintPath>
     </Reference>
@@ -252,7 +253,15 @@
     <Compile Include="forms\Fakultet\FakultetL.aspx.designer.cs">
       <DependentUpon>FakultetL.aspx</DependentUpon>
     </Compile>
+    <Content Include="forms\Query1.aspx" />
     <Content Include="forms\Zayavlenie\ZayavlenieL.aspx" />
+    <Compile Include="forms\Query1.aspx.cs">
+      <DependentUpon>Query1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\Query1.aspx.designer.cs">
+      <DependentUpon>Query1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="forms\Zayavlenie\ZayavlenieL.aspx.cs">
       <DependentUpon>ZayavlenieL.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -279,6 +288,7 @@
     <Content Include="shared\img\1.png" />
     <Content Include="shared\img\2.png" />
     <Content Include="shared\img\3.png" />
+    <Content Include="shared\img\4.png" />
     <Content Include="shared\img\unnamed.png" />
     <Content Include="Web.sitemap" />
     <Content Include="forms\Abiturient\AbiturientE.aspx" />
@@ -773,12 +783,12 @@
       <DependentUpon>LoginForm.aspx</DependentUpon>
     </Compile>
     <Content Include="favicon.ico" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="ExecuteQuery.aspx.cs">
+      <DependentUpon>ExecuteQuery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="ExecuteQuery.aspx.designer.cs">
+      <DependentUpon>ExecuteQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="WOLVSettApplyer.cs" />
     <Compile Include="Constants.cs" />
@@ -789,7 +799,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ServiceConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="ExecuteQuery.aspx" />
     <Content Include="Xml\ServiceSecurityProvider.xml" />
     <Content Include="Xml\ViewColumnProvider.xml" />
     <Content Include="Xml\ViewColumnProvider.xsd" />
@@ -812,6 +822,22 @@
     </Compile>
     <Compile Include="forms\FormaObucheniya\FormaObucheniyaE.aspx.designer.cs">
       <DependentUpon>FormaObucheniyaE.aspx</DependentUpon>
+    </Compile>
+    <Content Include="forms\TipZayavleniya\TipZayavleniyaL.aspx" />
+    <Compile Include="forms\TipZayavleniya\TipZayavleniyaL.aspx.cs">
+      <DependentUpon>TipZayavleniyaL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\TipZayavleniya\TipZayavleniyaL.aspx.designer.cs">
+      <DependentUpon>TipZayavleniyaL.aspx</DependentUpon>
+    </Compile>
+    <Content Include="forms\TipZayavleniya\TipZayavleniyaE.aspx" />
+    <Compile Include="forms\TipZayavleniya\TipZayavleniyaE.aspx.cs">
+      <DependentUpon>TipZayavleniyaE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\TipZayavleniya\TipZayavleniyaE.aspx.designer.cs">
+      <DependentUpon>TipZayavleniyaE.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

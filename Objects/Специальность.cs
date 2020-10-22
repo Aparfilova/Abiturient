@@ -31,17 +31,25 @@ namespace IIS.Abiturient
     [View("СпециальностьE", new string[] {
             "НомерСпециальности as \'Номер специальности\'",
             "Наименование as \'Наименование\'",
-            "Факультет.НазваниеФакультета"})]
+            "Факультет",
+            "Факультет.НазваниеФакультета as \'Факультет\'",
+            "ТипЗаявления",
+            "ТипЗаявления.Наименование"})]
     [View("СпециальностьL", new string[] {
             "НомерСпециальности as \'Номер специальности\'",
             "Наименование as \'Наименование\'",
-            "Факультет.НазваниеФакультета"})]
+            "Факультет",
+            "Факультет.НазваниеФакультета as \'Факультет\'",
+            "ТипЗаявления",
+            "ТипЗаявления.Наименование"})]
     public class Специальность : ICSSoft.STORMNET.DataObject
     {
         
         private int fНомерСпециальности;
         
         private string fНаименование;
+        
+        private IIS.Abiturient.ТипЗаявления fТипЗаявления;
         
         private IIS.Abiturient.Факультет fФакультет;
         
@@ -110,6 +118,40 @@ namespace IIS.Abiturient
                 // *** Start programmer edit section *** (Специальность.Наименование Set end)
 
                 // *** End programmer edit section *** (Специальность.Наименование Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Специальность.
+        /// </summary>
+        // *** Start programmer edit section *** (Специальность.ТипЗаявления CustomAttributes)
+
+        // *** End programmer edit section *** (Специальность.ТипЗаявления CustomAttributes)
+        [PropertyStorage(new string[] {
+                "ТипЗаявления"})]
+        [NotNull()]
+        public virtual IIS.Abiturient.ТипЗаявления ТипЗаявления
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Специальность.ТипЗаявления Get start)
+
+                // *** End programmer edit section *** (Специальность.ТипЗаявления Get start)
+                IIS.Abiturient.ТипЗаявления result = this.fТипЗаявления;
+                // *** Start programmer edit section *** (Специальность.ТипЗаявления Get end)
+
+                // *** End programmer edit section *** (Специальность.ТипЗаявления Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Специальность.ТипЗаявления Set start)
+
+                // *** End programmer edit section *** (Специальность.ТипЗаявления Set start)
+                this.fТипЗаявления = value;
+                // *** Start programmer edit section *** (Специальность.ТипЗаявления Set end)
+
+                // *** End programmer edit section *** (Специальность.ТипЗаявления Set end)
             }
         }
         

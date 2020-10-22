@@ -36,11 +36,13 @@
 
 </div>
 <div class="clearfix">
-  <asp:Label CssClass="descLbl" ID="ctrlТипЗаявленияLabel" runat="server" Text="Тип заявления" EnableViewState="False">
+  <asp:Label CssClass="descLbl" ID="ctrlАбитуриентLabel" runat="server" Text="Абитуриент" EnableViewState="False">
 </asp:Label>
-<asp:TextBox CssClass="descTxt" ID="ctrlТипЗаявления" runat="server">
-</asp:TextBox>
+<ac:MasterEditorAjaxLookUp ID="ctrlАбитуриент" CssClass="descTxt" runat="server" ShowInThickBox="True" Autocomplete="true" />
 
+<asp:RequiredFieldValidator ID="ctrlАбитуриентRequiredFieldValidator" runat="server" ControlToValidate="ctrlАбитуриент"
+                            ErrorMessage="Не указано: Абитуриент" Text="*" 
+                            EnableClientScript="true" ValidationGroup="savedoc" />
 
 </div>
 <div class="clearfix">
@@ -87,6 +89,24 @@
   <asp:Label CssClass="descLbl" ID="ctrlАбитуриент_АдресLabel" runat="server" Text="Адрес" EnableViewState="False">
 </asp:Label>
 <asp:TextBox CssClass="descTxt" ID="ctrlАбитуриент_Адрес" runat="server" ReadOnly="true">
+</asp:TextBox>
+
+
+</div>
+<div class="clearfix">
+  <asp:Label CssClass="descLbl" ID="ctrlПриемнаяКомиссияLabel" runat="server" Text="ПриемнаяКомиссия" EnableViewState="False">
+</asp:Label>
+<ac:MasterEditorAjaxLookUp ID="ctrlПриемнаяКомиссия" CssClass="descTxt" runat="server" ShowInThickBox="True" Autocomplete="true" />
+
+<asp:RequiredFieldValidator ID="ctrlПриемнаяКомиссияRequiredFieldValidator" runat="server" ControlToValidate="ctrlПриемнаяКомиссия"
+                            ErrorMessage="Не указано: ПриемнаяКомиссия" Text="*" 
+                            EnableClientScript="true" ValidationGroup="savedoc" />
+
+</div>
+<div class="clearfix">
+  <asp:Label CssClass="descLbl" ID="ctrlПриемнаяКомиссия_ДолжностьLabel" runat="server" Text="Приемная комиссия" EnableViewState="False">
+</asp:Label>
+<asp:TextBox CssClass="descTxt" ID="ctrlПриемнаяКомиссия_Должность" runat="server" ReadOnly="true">
 </asp:TextBox>
 
 

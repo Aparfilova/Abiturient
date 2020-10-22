@@ -11,7 +11,9 @@
 namespace IIS.Abiturient
 {
     using ICSSoft.STORMNET.Business;
+    using ICSSoft.STORMNET.Business.LINQProvider;
     using System;
+    using System.Linq;
     using System.Xml;
     
     

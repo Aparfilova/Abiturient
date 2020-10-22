@@ -20,10 +20,11 @@
     <siteMapNode title="Приемная комиссия" roles="*" xmlns="">
       <siteMapNode title="Абитуриент" description="" url="~/forms/Abiturient/AbiturientL.aspx" />
       <siteMapNode title="Заявление" description="" url="~/forms/Zayavlenie/ZayavlenieL.aspx" />
-      <siteMapNode title="Приемная комиссия" description="" url="~/forms/PriemnayaKomissiya/PriemnayaKomissiyaL.aspx" />
+      <siteMapNode title="ПриемнаяКомиссия" description="" url="~/forms/PriemnayaKomissiya/PriemnayaKomissiyaL.aspx" />
     </siteMapNode>
     <siteMapNode title="Учебная часть" roles="*" xmlns="">
       <siteMapNode title="Специальность" description="" url="~/forms/Specialnost/SpecialnostL.aspx" />
+      <siteMapNode title="ТипЗаявления" description="" url="~/forms/TipZayavleniya/TipZayavleniyaL.aspx" />
       <siteMapNode title="Факультет" description="" url="~/forms/Fakultet/FakultetL.aspx" />
     </siteMapNode>
   </siteMapNode>

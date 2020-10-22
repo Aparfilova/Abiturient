@@ -7,72 +7,99 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IIS.Abiturient {
+namespace IIS.Abiturient.forms {
     
     
-    public partial class СпециальностьE {
+    public partial class Query1 {
         
         /// <summary>
-        /// ctrlНомерСпециальностиLabel control.
+        /// ButtonQuery1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ctrlНомерСпециальностиLabel;
+        protected global::System.Web.UI.WebControls.Button ButtonQuery1;
         
         /// <summary>
-        /// ctrlНомерСпециальности control.
+        /// QueryLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ICSSoft.STORMNET.Web.AjaxControls.AlphaNumericTextBox ctrlНомерСпециальности;
+        protected global::System.Web.UI.WebControls.Label QueryLabel1;
         
         /// <summary>
-        /// ctrlНаименованиеLabel control.
+        /// ButtonQuery2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ctrlНаименованиеLabel;
+        protected global::System.Web.UI.WebControls.Button ButtonQuery2;
         
         /// <summary>
-        /// ctrlНаименование control.
+        /// QueryLabel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ctrlНаименование;
+        protected global::System.Web.UI.WebControls.Label QueryLabel2;
         
         /// <summary>
-        /// ctrlФакультетLabel control.
+        /// ButtonQuery3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ctrlФакультетLabel;
+        protected global::System.Web.UI.WebControls.Button ButtonQuery3;
         
         /// <summary>
-        /// ctrlФакультет control.
+        /// QueryLabel3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ICSSoft.STORMNET.Web.AjaxControls.MasterEditorAjaxLookUp ctrlФакультет;
+        protected global::System.Web.UI.WebControls.Label QueryLabel3;
         
         /// <summary>
-        /// ctrlФакультетValidator control.
+        /// ButtonQuery4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ctrlФакультетValidator;
+        protected global::System.Web.UI.WebControls.Button ButtonQuery4;
+        
+        /// <summary>
+        /// QueryLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label QueryLabel4;
+        
+        /// <summary>
+        /// ButtonQuery5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonQuery5;
+        
+        /// <summary>
+        /// QueryLabel5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label QueryLabel5;
     }
 }
