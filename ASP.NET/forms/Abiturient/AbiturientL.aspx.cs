@@ -16,7 +16,11 @@ namespace IIS.Abiturient
         public АбитуриентL() : base(Абитуриент.Views.АбитуриентL)
         {
             EditPage = АбитуриентE.FormPath;
-            
+            LoadingCustomizationStruct lcs = LoadingCustomizationStruct.GetSimpleStruct(typeof(Абитуриент), Abiturient.Абитуриент.Views.АбитуриентL);
+            ICSSoft.STORMNET.DataObject[] Абитуриент = DataServiceProvider.DataService.LoadObjects(lcs);
+            ObjectStringDataView[] osdvabiturients = DataServiceProvider.DataService.LoadStringedObjectView(';', lcs);
+            var Личность = DataServiceProvider.DataService.LoadObjects(lcs).Cast<Абитуриент>();
+            Console.WriteLine("");
 
         }
 
