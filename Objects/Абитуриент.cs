@@ -12,9 +12,12 @@ namespace IIS.Abiturient
 {
     using System;
     using System.Xml;
+    using ICSSoft.STORMNET.Business;
     using ICSSoft.STORMNET;
-    
-    
+    using LinqToDB.ServiceModel;
+    using System.Linq;
+
+
     // *** Start programmer edit section *** (Using statements)
 
     // *** End programmer edit section *** (Using statements)
@@ -26,6 +29,7 @@ namespace IIS.Abiturient
     // *** Start programmer edit section *** (Абитуриент CustomAttributes)
 
     // *** End programmer edit section *** (Абитуриент CustomAttributes)
+    [BusinessServer("IIS.Abiturient.БизнесЛогика, Abiturient.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("АбитуриентE", new string[] {
@@ -56,18 +60,41 @@ namespace IIS.Abiturient
         private string fГород;
         
         private string fАдрес;
-        
+
+        private string fЛичность;
+
         // *** Start programmer edit section *** (Абитуриент CustomMembers)
 
         // *** End programmer edit section *** (Абитуриент CustomMembers)
 
-        
+
         /// <summary>
         /// Фамилия.
         /// </summary>
         // *** Start programmer edit section *** (Абитуриент.Фамилия CustomAttributes)
 
         // *** End programmer edit section *** (Абитуриент.Фамилия CustomAttributes)
+        [ICSSoft.STORMNET.NotStored()]
+        [StrLen(255)]
+        [DataServiceExpression(typeof(SQLDataService), "isnull(@Фамилия@,\'\') + \' \' + isnull(@Имя@,\'\') + isnull(@Отчество@,\'\')")]
+        public virtual string Личность
+        {
+            get
+            {
+                return string.Format("{0} {1}", fФамилия, fИмя, fОтчество);
+                
+
+            }
+            set
+            {
+                LoadingCustomizationStruct lcs = LoadingCustomizationStruct.GetSimpleStruct(typeof(Абитуриент), Abiturient.Абитуриент.Views.АбитуриентL);
+                ICSSoft.STORMNET.DataObject[] Абитуриент = DataServiceProvider.DataService.LoadObjects(lcs);
+                ObjectStringDataView[] osdvabiturients = DataServiceProvider.DataService.LoadStringedObjectView(';', lcs);
+                var Личность = DataServiceProvider.DataService.LoadObjects(lcs).Cast<Абитуриент>();
+                Console.WriteLine("");
+
+            }
+        }
         [StrLen(255)]
         public virtual string Фамилия
         {
@@ -85,7 +112,7 @@ namespace IIS.Abiturient
             set
             {
                 // *** Start programmer edit section *** (Абитуриент.Фамилия Set start)
-
+                
                 // *** End programmer edit section *** (Абитуриент.Фамилия Set start)
                 this.fФамилия = value;
                 // *** Start programmer edit section *** (Абитуриент.Фамилия Set end)

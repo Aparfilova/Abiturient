@@ -10,13 +10,14 @@
 
 namespace IIS.Abiturient
 {
+    using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
     using ICSSoft.STORMNET.Business.LINQProvider;
     using System;
     using System.Linq;
     using System.Xml;
-    
-    
+
+
     // *** Start programmer edit section *** (Using statements)
 
     // *** End programmer edit section *** (Using statements)
@@ -27,7 +28,8 @@ namespace IIS.Abiturient
     /// </summary>
     // *** Start programmer edit section *** (БизнесЛогика CustomAttributes)
 
-    // *** End programmer edit section *** (БизнесЛогика CustomAttributes)
+    // *** End programmer edit section *** (БизнесЛогика CustomAttributes
+    
     [ICSSoft.STORMNET.AccessType(ICSSoft.STORMNET.AccessType.none)]
     public class БизнесЛогика : ICSSoft.STORMNET.Business.BusinessServer
     {
@@ -53,6 +55,17 @@ namespace IIS.Abiturient
             // *** End programmer edit section *** (OnUpdateЗаписьВЗаявлении)
         }
         
+        // *** Start programmer edit section *** (OnUpdateАбитуриент CustomAttributes)
+
+        // *** End programmer edit section *** (OnUpdateАбитуриент CustomAttributes)
+        public virtual ICSSoft.STORMNET.DataObject[] OnUpdateАбитуриент(IIS.Abiturient.Абитуриент UpdatedObject)
+        {
+            // *** Start programmer edit section *** (OnUpdateАбитуриент)
+
+            return new ICSSoft.STORMNET.DataObject[0];
+            // *** End programmer edit section *** (OnUpdateАбитуриент)
+        }
+        
         // *** Start programmer edit section *** (OnUpdateЗаявление CustomAttributes)
         
         // *** End programmer edit section *** (OnUpdateЗаявление CustomAttributes)
@@ -63,9 +76,9 @@ namespace IIS.Abiturient
                 DateTime NewDate = new DateTime(2020, 05, 01);
                 DateTime EndDate = new DateTime(2020, 07, 31);
                 if (UpdatedObject.ДатаПодачи < NewDate)
-                    throw new Exception("Выберите другую дату");
+                    throw new Exception("Дата не входит в период подачи заявления");
                 if (UpdatedObject.ДатаПодачи > EndDate)
-                    throw new Exception("Выберите другую дату");
+                    throw new Exception("Дата не входит в период подачи заявления");
           
             
             return new ICSSoft.STORMNET.DataObject[0];

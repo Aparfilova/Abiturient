@@ -36,6 +36,7 @@ namespace IIS.Abiturient
             "Приоритет as \'Приоритет\'",
             "Специальность",
             "Специальность.Наименование as \'Наименование\'"})]
+    [MasterViewDefineAttribute("ЗаписьВЗаявленииE", "Специальность", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
     public class ЗаписьВЗаявлении : ICSSoft.STORMNET.DataObject
     {
         

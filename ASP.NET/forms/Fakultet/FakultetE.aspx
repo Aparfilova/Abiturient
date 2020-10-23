@@ -25,14 +25,6 @@
 
 </div>
 <div class="clearfix">
-  <asp:Label CssClass="descLbl" ID="ctrlНомерФакультетаLabel" runat="server" Text="Номер факультета" EnableViewState="False">
-</asp:Label>
-<ac:AlphaNumericTextBox CssClass="descTxt" ID="ctrlНомерФакультета" Type="Numeric" runat="server">
-</ac:AlphaNumericTextBox>
-
-
-</div>
-<div class="clearfix">
   <asp:Label CssClass="descLbl" ID="ctrlДеканLabel" runat="server" Text="Декан" EnableViewState="False">
 </asp:Label>
 <asp:TextBox CssClass="descTxt" ID="ctrlДекан" runat="server">

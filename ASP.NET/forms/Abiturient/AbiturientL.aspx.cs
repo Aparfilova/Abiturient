@@ -2,6 +2,7 @@
 namespace IIS.Abiturient
 {
     using System;
+    using ICSSoft.STORMNET.Business;
     using ICSSoft.STORMNET.Web.Controls;
 
     using Resources;
@@ -15,8 +16,10 @@ namespace IIS.Abiturient
         public АбитуриентL() : base(Абитуриент.Views.АбитуриентL)
         {
             EditPage = АбитуриентE.FormPath;
+            
+
         }
-                
+
         /// <summary>
         /// Путь до формы.
         /// </summary>
@@ -30,6 +33,7 @@ namespace IIS.Abiturient
         /// </summary>
         protected override void Preload()
         {
+            
         }
 
         /// <summary>

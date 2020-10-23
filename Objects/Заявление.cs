@@ -40,24 +40,31 @@ namespace IIS.Abiturient
             "Абитуриент.Возраст as \'Возраст\'",
             "Абитуриент.Город as \'Город\'",
             "Абитуриент.Адрес as \'Адрес\'",
-            "ПриемнаяКомиссия",
-            "ПриемнаяКомиссия.Должность as \'Приемная комиссия\'"})]
+            "ПриемнаяКомиссия"}, Hidden=new string[] {
+            "ПорядковыйНомер"})]
     [AssociatedDetailViewAttribute("ЗаявлениеE", "ЗаписьВЗаявлении", "ЗаписьВЗаявленииE", true, "", "", true, new string[] {
             ""})]
+    [MasterViewDefineAttribute("ЗаявлениеE", "Абитуриент", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Фамилия")]
+    [MasterViewDefineAttribute("ЗаявлениеE", "ПриемнаяКомиссия", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Должность")]
     [View("ЗаявлениеL", new string[] {
             "ПорядковыйНомер as \'Порядковый номер\'",
             "ДатаПодачи as \'Дата подачи\'",
+            "ПриемнаяКомиссия",
+            "ПриемнаяКомиссия.Должность as \'Приемная комиссия\'",
             "Абитуриент",
             "Абитуриент.Фамилия as \'Фамилия\'",
             "Абитуриент.Имя as \'Имя\'",
             "Абитуриент.Отчество as \'Отчество\'",
             "Абитуриент.Возраст as \'Возраст\'",
             "Абитуриент.Город as \'Город\'",
-            "Абитуриент.Адрес as \'Адрес\'",
+            "Абитуриент.Адрес as \'Адрес\'"}, Hidden=new string[] {
+            "ПорядковыйНомер",
             "ПриемнаяКомиссия",
-            "ПриемнаяКомиссия.Должность as \'Приемная комиссия\'"})]
+            "Абитуриент"})]
     [AssociatedDetailViewAttribute("ЗаявлениеL", "ЗаписьВЗаявлении", "ЗаписьВЗаявленииE", true, "", "", true, new string[] {
             ""})]
+    [MasterViewDefineAttribute("ЗаявлениеL", "ПриемнаяКомиссия", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Должность")]
+    [MasterViewDefineAttribute("ЗаявлениеL", "Абитуриент", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Фамилия")]
     public class Заявление : ICSSoft.STORMNET.DataObject
     {
         

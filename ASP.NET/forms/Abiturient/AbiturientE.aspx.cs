@@ -5,7 +5,8 @@ namespace IIS.Abiturient
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Web.Controls;
     using ICSSoft.STORMNET.Web.AjaxControls;
-    
+    using ICSSoft.STORMNET.Business;
+
     public partial class АбитуриентE : BaseEditForm<Абитуриент>
     {
         /// <summary>
@@ -29,6 +30,7 @@ namespace IIS.Abiturient
         /// </summary>
         protected override void Preload()
         {
+           
         }
 
         /// <summary>
