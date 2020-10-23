@@ -2,6 +2,7 @@
 namespace IIS.Abiturient
 {
     using System;
+    using System.Linq;
     using ICSSoft.STORMNET.Business;
     using ICSSoft.STORMNET.Web.Controls;
 
